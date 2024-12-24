@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Crocodile Fact</h1>
+        <p id="fact"></p>
+        <button onclick="displayRandomFact()">Show Another Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "Crocodiles can live for over 100 years!",
+            "They have a third eyelid that protects their eyes underwater.",
+            "Crocodiles can hold their breath for up to an hour.",
+            "They have a powerful bite that can crush bones.",
+            "Crocodiles are excellent swimmers and can even run short distances on land.",
+            "They are carnivores and their diet consists mainly of fish, birds, and mammals.",
+            "Crocodiles are found in tropical regions around the world.",
+            "They are very territorial and will defend their area from other crocodiles.",
+            "Crocodiles are related to dinosaurs!",
+            "They are one of the oldest living species on Earth."
+        ];
+
+        function displayRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[randomIndex];
+        }
+
+        // Display a fact when the page loads
+        window.onload = displayRandomFact;
+    </script>
+</body>
+</html>
